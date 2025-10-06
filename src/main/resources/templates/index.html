@@ -1,10 +1,49 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
-    <title>SSO Demo</title>
+    <meta charset="UTF-8">
+    <title>Spring Boot OIDC SSO Demo</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f0f4f7;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .container {
+            background: #ffffff;
+            padding: 40px 60px;
+            border-radius: 10px;
+            box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+            text-align: center;
+        }
+        h2 {
+            color: #333;
+            margin-bottom: 20px;
+        }
+        a.button {
+            display: inline-block;
+            padding: 12px 25px;
+            margin-top: 20px;
+            background-color: #007bff;
+            color: white;
+            text-decoration: none;
+            border-radius: 6px;
+            transition: background 0.3s;
+        }
+        a.button:hover {
+            background-color: #0056b3;
+        }
+    </style>
 </head>
 <body>
-<h2>Welcome to Spring Boot OIDC SSO</h2>
-<a href="/home">Login with SSO</a>
+<div class="container">
+    <h2>Welcome to Spring Boot OIDC SSO Demo</h2>
+    <a class="button" href="/home">Login with SSO</a>
+</div>
 </body>
 </html>

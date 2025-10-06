@@ -1,17 +1,72 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
+  <meta charset="UTF-8">
   <title>User Home</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #eef2f7;
+      margin: 0;
+      padding: 0;
+    }
+    .container {
+      max-width: 700px;
+      margin: 50px auto;
+      background: #ffffff;
+      padding: 30px 40px;
+      border-radius: 10px;
+      box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+    }
+    h2 {
+      color: #333;
+      margin-bottom: 10px;
+    }
+    p {
+      font-size: 16px;
+      color: #555;
+      margin-bottom: 20px;
+    }
+    ul {
+      list-style: none;
+      padding-left: 0;
+    }
+    li {
+      background: #f7f9fb;
+      margin-bottom: 8px;
+      padding: 10px 15px;
+      border-radius: 6px;
+      font-size: 14px;
+    }
+    b {
+      color: #007bff;
+    }
+    a.logout {
+      display: inline-block;
+      margin-top: 25px;
+      padding: 10px 20px;
+      background-color: #dc3545;
+      color: white;
+      text-decoration: none;
+      border-radius: 6px;
+      transition: background 0.3s;
+    }
+    a.logout:hover {
+      background-color: #a71d2a;
+    }
+  </style>
 </head>
 <body>
-<h2>Welcome, <span th:text="${name}">User</span></h2>
-<p>Email: <span th:text="${email}">unknown</span></p>
-<h3>Claims:</h3>
-<ul>
-  <li th:each="entry : ${claims}">
-    <b th:text="${entry.key}"></b> : <span th:text="${entry.value}"></span>
-  </li>
-</ul>
-<a href="/logout">Logout</a>
+<div class="container">
+  <h2>Welcome, <span th:text="${name}">User</span></h2>
+  <p>Email: <span th:text="${email}">unknown</span></p>
+  <h3>Claims:</h3>
+  <ul>
+    <li th:each="entry : ${claims}">
+      <b th:text="${entry.key}"></b> : <span th:text="${entry.value}"></span>
+    </li>
+  </ul>
+  <a class="logout" href="/logout">Logout</a>
+</div>
 </body>
 </html>
