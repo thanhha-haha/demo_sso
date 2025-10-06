@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <title>User Home</title>
+</head>
+<body>
+<h2>Welcome, <span th:text="${name}">User</span></h2>
+<p>Email: <span th:text="${email}">unknown</span></p>
+<h3>Claims:</h3>
+<ul>
+  <li th:each="entry : ${claims}">
+    <b th:text="${entry.key}"></b> : <span th:text="${entry.value}"></span>
+  </li>
+</ul>
+<a href="/logout">Logout</a>
+</body>
+</html>
